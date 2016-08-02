@@ -10,10 +10,10 @@ var barcode = require('./routes/BarcodeTransformPost');
  app.use(bodyParser.urlencoded({extend:true}));
 
 app.post('/PostTransformBarcode',function (req,res) {
-    res.send(new post().postTransformBarcode(req.body.code));
+    res.send(new post().postTransformBarcode(req.body.posts));
 });
 app.post('/BarcodeTransformPost',function (req,res) {
-    res.send(new barcode().BarcodeTransformPost(req.body.code));
+    res.send(new barcode().BarcodeTransformPost(req.body.barcode));
 });
 app.listen(3000,function () {
     console.log('Example app listening on port 3000!');
